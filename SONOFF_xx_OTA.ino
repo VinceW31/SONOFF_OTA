@@ -28,7 +28,7 @@ void setup(){
 //Insert sketch code from here*********************************************************
 
 //Web Page Design
-  webPage += "<h1 style='text-align:center;'>SONOFF 119</h1><h2 style='text-align:center;'>(fw ver 12)</h2><p style='text-align:center;'><a href=\"on\"><button style='font-size:170%;'>ON</button></a>&nbsp;&nbsp<a href=\"off\"><button style='font-size:170%;'>OFF</button></a></p>";  
+  webPage += "<h1 style='text-align:center;'>SONOFF Num 119</h1><h2 style='text-align:center;'>(fw ver XX)</h2><p style='text-align:center;'><a href=\"on\"><button style='font-size:170%;'>ON</button></a>&nbsp;&nbsp<a href=\"off\"><button style='font-size:170%;'>OFF</button></a></p>";  
 
 // Initialise
   pinMode(Led, OUTPUT);

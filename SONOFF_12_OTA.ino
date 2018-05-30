@@ -6,8 +6,8 @@
 
 MDNSResponder mdns;
 // Replace with your network credentials
-const char* ssid = "BTHub5-Q9P2";
-const char* password = "4aceae57f3";
+const char* ssid = "........";
+const char* password = "........";
 
 ESP8266WebServer server(80);
 String webPage = "";

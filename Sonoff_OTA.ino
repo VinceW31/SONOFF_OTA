@@ -3,8 +3,8 @@
 #include <WiFiUdp.h>
 #include <ArduinoOTA.h>
 
-const char* ssid = "BTHub5-Q9P2";
-const char* password = "4aceae57f3";
+const char* ssid = "........"; //Insert your SSID
+const char* password = "........"; //Insert your Router Password
 
 void setup() {
   Serial.begin(115200);

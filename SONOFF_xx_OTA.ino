@@ -8,8 +8,8 @@
 
 MDNSResponder mdns;
 // Replace with your network credentials
-const char* ssid = ".........."; //insert your SSID
-const char* password = ".........."; //insert your Password
+const char* ssid = "........"; //Insert your SSID
+const char* password = "........"; //Insert your Router Password
 
 ESP8266WebServer server(80);
 String webPage = "";

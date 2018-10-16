@@ -5,8 +5,11 @@ The original SONOFF firmware is replaced with the SONOFF_XX_OTA firmware by init
 Once the initial SONOFF_XX_OTA firmware is uploaded, then subsequent firmware uploads or changes can be sent to the SONOFF via WiFi, or "Over The Air" (OTA).  This means that, once fitted, the SONOFF device can then remain in place, it does not need to be disconnected from the mains or connected to any computer or FTDI device to be updated with new firmware.
 
 Procedure:
+
 Disassemble the SONOFF and install header pins on SONOFF PCB. (see YouTube)
+
 Correctly connect FTDI adapter to SONOFF header pins. (3.3v, Ground, TX and RX)
+
 Press and hold SONOFF push button switch and connect FTDI adapter to computer USB, once connected to computer then release the switch.  This will put SONOFF in programming mode.  If the SONOFF LED is flashing it’s NOT in programming mode, so try again.
 Start Arduino.exe on computer.
 Load/Open file: Sonoff_XX_OTA

@@ -14,6 +14,8 @@ Press and hold SONOFF push button switch and connect FTDI adapter to computer US
 
 Start Arduino.exe on computer.
 
+In the Tools menu maks sure your Set up is as shown in the settings.jpg
+
 Load/Open file: Sonoff_OTA_xx
 
 In Arduino “Tools” menu select the correct COM port for the SONOFF.

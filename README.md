@@ -22,19 +22,15 @@ Verify and then Upload the Sonoff_OTA_xx file to the SONOFF (if it fails to uplo
 
 After successful upload, disconnect FTDI USB plug at the computer.
 
-Reconnect the FTDI USB plug to the same computer USB (without pressing the SONOFF switch this time) and immediately select the Arduino “Tools” menu and then “Serial Monitor”.  The Serial Monitor window will open and a few seconds later display the new IP address for the SONOFF. If you were too slow and didn’t see the IP address displayed then repeat this step.
+Reconnect the FTDI USB plug to the same computer USB (without pressing the SONOFF switch this time) and immediately select the Arduino “Tools” menu and then “Serial Monitor”.  The Serial Monitor window will open and a few seconds later display the new IP address for the SONOFF, write this down as you will need it in the next step. If you were too slow and didn’t see the IP address displayed then repeat this step.
 
-In a Google Chrome address bar type in the IP address for the SONOFF and after a few seconds a SONOFF control screen should open.  Test the ON and OFF function by pressing the relevant buttons on screen, the SONOFF LED should display the relay status.  Note that at this stage the incorrect IP address is shown in the title at the top of the web page.
-
-Close the Google Chrome tab.
-
-In the Arduino file change the SONOFF IP address number in the programme (eg 127 etc) to the correct one for the new SONOFF (also correct the FW version if its changed).
+Now, in the Arduino firmware file change the SONOFF IP address number in the programme (eg 127 etc) to the correct one for the new SONOFF (also correct the FW version if its changed).
 
 Save the amended file.
 
 Unplug the USB at the computer and then plug it back in again.
 
-In the Tools menu, select the new WiFi port “ESP8266 xxx etc (+ new IP address)" that’s displayed rather than the COM port (if it’s not shown, then deselect the COM port, unplug the USB and plug it in again and try the Tools menu again).
+In the Tools menu, select the new WiFi port “ESP8266 xxx etc (+ new IP address)" that’s displayed rather than the COM port (if it’s not shown, then deselect the COM port, unplug the USB and plug it in again and try the Tools menu again, or restart the Arduino software).
 
 Select Verify and then Upload to send the amended file to the SONOFF via WiFi (no need to press the SONOFF button to put it in programming mode any more).
 

@@ -14,7 +14,8 @@ Press and hold SONOFF push button switch and connect FTDI adapter to computer US
 
 Start Platform IO on your computer.
 
-Make sure the SSID and Password for your Router have been inserted into the SONOFF_OTA code and you have enabled the OTA lines with the correct ip address for your SONOFF in the Platformio.ini file.
+Make sure the SSID and Password for your Router have been inserted into the SONOFF_OTA code at lines 12 and 13.
+Make sure you have enabled the OTA lines in th Platformio.ini file with the correct ip address for your SONOFF in the Platformio.ini file.
 
 Load/Open file: Sonoff_OTA
 

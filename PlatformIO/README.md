@@ -6,6 +6,8 @@ Once the initial SONOFF_XX firmware is uploaded, then subsequent firmware upload
 
 Procedure:
 
+The only 2 files you will need to download (or just copy the code) are located in the Platform IO page, the 2 files are SONOFF_OTA and Platformio.ini
+
 Disassemble the SONOFF and install header pins on SONOFF PCB. (see YouTube)
 
 Correctly connect FTDI adapter to SONOFF header pins. (3.3v, Ground, TX and RX)
@@ -14,30 +16,32 @@ Press and hold SONOFF push button switch and connect FTDI adapter to computer US
 
 Start Platform IO on your computer.
 
-Make sure the SSID and Password for your Router have been inserted into the SONOFF_OTA code at lines 12 and 13.
-Make sure you have enabled the OTA lines in th Platformio.ini file with the correct ip address for your SONOFF in the Platformio.ini file.
+Create a new Project for a "esp01_1m" board and then import (copy and paste) the SONOFF_OTA code into the main.cpp file.
+
+Import (copy and paste) the Platformio.ini code into the Platformio.ini file.
+
+In the new main.cpp file change the SSID and Password at lines 12 and 13 to those of your own Router.
+
+Enabled the OTA lines in the Platformio.ini file with the correct ip address for your SONOFF in the Platformio.ini file.
+
+Now compile and verify the code to make sure it builds correctly for the esp01 board.
 
 Load/Open file: Sonoff_OTA
 
-In Arduino “Tools” menu select the correct COM port for the SONOFF.
+If it compiles correctly then Upload the code to the SONOFF for the first time using the (autodetected) COM port (if it fails to upload then try swapping the TX and RX leads over and try again).
 
-Verify and then Upload the Sonoff_OTA_xx file to the SONOFF (if it fails to upload then check the COM port is correct or try swapping the TX and RX leads over and try again).
+After a successful upload run the serial monitor function in Platform IO and the SONOFF should reboot and show you the IP address that its been give by your Router. Note down the IP address as youll need it in the next step.
 
-After successful upload, disconnect FTDI USB plug at the computer.
-
-Reconnect the FTDI USB plug to the same computer USB (without pressing the SONOFF switch this time) and immediately select the Arduino “Tools” menu and then “Serial Monitor”.  The Serial Monitor window will open and a few seconds later display the new IP address for the SONOFF, write this down as you will need it in the next step. If you were too slow and didn’t see the IP address displayed then repeat this step.
-
-Now, in the Arduino firmware file (at the Web Page Design section) change the SONOFF IP address number in the programme (eg 127 etc) to the correct one for the new SONOFF (also correct the FW version if its changed).
+Now, in the main.cpp file (at the Web Page Design section) change the SONOFF IP address number in the programme (eg 127 etc) to the correct one for the new SONOFF (also correct the FW version if its changed).
 
 Save the amended file.
 
-Unplug the USB at the computer and then plug it back in again.
+Then in the Platformio.ini file uncomment the ; upload protocol....... line (by removing the; at the fromt of it)
+Also change the IP address in the next line to the IP address you recorded in the steps above, then uncomment that line too. 
 
-In the Tools menu, select the new WiFi port “ESP8266 xxx etc (+ new IP address)" that’s displayed rather than the COM port (if it’s not shown, then deselect the COM port, unplug the USB and plug it in again and try the Tools menu again, or restart the Arduino software).
+Select Verify again to compile the code once more and then Upload the amended file to the SONOFF via WiFi (no need to press the SONOFF button to put it in programming mode any more).
 
-Select Verify and then Upload to send the amended file to the SONOFF via WiFi (no need to press the SONOFF button to put it in programming mode any more).
-
-After successful upload, reopen Google Chrome and in the address bar type in the IP address for the SONOFF again.  This time the SONOFF control screen should open and display the correct IP address as you just entered it in the Arduino file.  This confirms the file was uploaded successfully to the SONOFF via WiFi. 
+After successful upload, open Google Chrome and in the address bar type in the IP address for the SONOFF again.  This time the SONOFF control screen should open and display the correct IP address as you just entered it in the Arduino file.  This confirms the file was uploaded successfully to the SONOFF via WiFi. 
 
 Again test the ON and OFF function by pressing the buttons on screen. 
 
@@ -47,6 +51,6 @@ Install SONOFF in desired location and connect to mains.
 
 Test SONOFF connectivity and function via Google Chrome Web Page as above.
 
-To upload new firmware in the future make sure the Sonoff is connected to mains power, then just open Arduino on your computer, select  the Tools menu, select the correct WiFi port “ESP8266 xxx etc (+ SONOFF IP address)" and then upload your new firmware. Simple!
+To upload new firmware in the future make sure the Sonoff is connected to mains power, then just open Platform IO on your computer, make sure the correct IP address is in the Platformio.ini file (if you have several SONOFFs) and then just upload your new firmware OTA. Simple!
 
 

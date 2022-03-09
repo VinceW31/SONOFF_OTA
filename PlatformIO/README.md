@@ -6,7 +6,7 @@ Once the initial SONOFF_XX firmware is uploaded, then subsequent firmware upload
 
 Procedure:
 
-The only 2 files you will need to download (or just copy the code) are located in the Platform IO page, the 2 files are SONOFF_OTA and Platformio.ini
+The only 2 files you will need to download (or just copy the code) are located in the Platform IO page, the 2 files are main.cpp and Platformio.ini
 
 Disassemble the SONOFF and install header pins on SONOFF PCB. (see YouTube)
 
@@ -16,11 +16,13 @@ Press and hold SONOFF push button switch and connect FTDI adapter to computer US
 
 Start Platform IO on your computer.
 
-Create a new Project for a "esp01_1m" board and then import (copy and paste) the SONOFF_OTA code into the main.cpp file.
+Create a new Project for a "esp01_1m" board and then import (copy and paste) the main.cpp code into the main.cpp file.
 
 Import (copy and paste) the Platformio.ini code into the Platformio.ini file.
 
 In the new main.cpp file change the SSID and Password at lines 12 and 13 to those of your own Router.
+
+Check or change the line "const int Ext_Sw = 4; //14 for Sonoff Basic, 04 for Sonoff Mini" if required
 
 Enabled the OTA lines in the Platformio.ini file with the correct ip address for your SONOFF in the Platformio.ini file.
 

@@ -24,11 +24,7 @@ In the new main.cpp file change the SSID and Password at lines 12 and 13 to thos
 
 Check or change the line "const int Ext_Sw = 4; //14 for Sonoff Basic, 04 for Sonoff Mini" if required
 
-Enabled the OTA lines in the Platformio.ini file with the correct ip address for your SONOFF in the Platformio.ini file.
-
 Now compile and verify the code to make sure it builds correctly for the esp01 board.
-
-Load/Open file: Sonoff_OTA
 
 If it compiles correctly then Upload the code to the SONOFF for the first time using the (autodetected) COM port (if it fails to upload then try swapping the TX and RX leads over and try again).
 
@@ -41,7 +37,7 @@ Save the amended file.
 Then in the Platformio.ini file uncomment the ; upload protocol....... line (by removing the; at the fromt of it)
 Also change the IP address in the next line to the IP address you recorded in the steps above, then uncomment that line too. 
 
-Select Verify again to compile the code once more and then Upload the amended file to the SONOFF via WiFi (no need to press the SONOFF button to put it in programming mode any more).
+Select Verify again to compile the code once more and then Upload the amended file to the SONOFF via WiFi OTA (no need to press the SONOFF button to put it in programming mode any more).
 
 After successful upload, open Google Chrome and in the address bar type in the IP address for the SONOFF again.  This time the SONOFF control screen should open and display the correct IP address as you just entered it in the Arduino file.  This confirms the file was uploaded successfully to the SONOFF via WiFi. 
 

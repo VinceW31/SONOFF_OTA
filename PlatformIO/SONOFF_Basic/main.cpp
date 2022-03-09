@@ -86,7 +86,7 @@ void setup(){
     digitalWrite(Relay, LOW);
     delay(1000); 
   });
-  server.on("/cycle", [](){ //Cyle relay ON/ OFF/ ON (for Xmas lights)
+  server.on("/cycle", [](){ //Cyle relay ON/ OFF/ ON (to get around ESP32 intermittent power ON issue)
     server.send(200, "text/html", webPageON);
     digitalWrite(Led, LOW);
     digitalWrite(Relay, HIGH);
